@@ -1,0 +1,61 @@
+<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Book Haven | About Us</title><link rel='stylesheet' href='css.css'></head><body>
+<header>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+    <div class="brand">
+      <img src="images/logo.png" alt="Book Haven logo"><!--  ⬅ your chosen logo -->
+      <span class="h2" style="color:#FFF;">Book Haven</span>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About&nbsp;Us</a>
+      <a href="testimonials.html">Testimonials</a>
+    </nav>
+  </div>
+</header>ß
+
+<div class="container">
+    <h2>About Book Haven</h2>
+    <p>Book Haven is a community-focused bookstore offering a curated selection of books, magazines, and literary gifts. We believe in the power of stories to inspire and connect people.</p>
+    <p><strong>Business Hours:</strong> Mon–Sat 9 AM – 8 PM, Sun 11 AM – 6 PM</p>
+
+    <h3 style="margin-top:2rem;">Feedback & Custom Orders</h3>
+    <form onsubmit="submitFeedback(event)">
+        <div style="margin-bottom:1rem;">
+            <label>Name<br><input type="text" id="fbName" required></label>
+        </div>
+        <div style="margin-bottom:1rem;">
+            <label>Email<br><input type="email" id="fbEmail" required></label>
+        </div>
+        <div style="margin-bottom:1rem;">
+            <label>Message / Custom Order<br><textarea id="fbMessage" rows="4" required></textarea></label>
+        </div>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</div>
+
+<footer>
+    <div class="container">
+        <div>
+            <h3>Stay in touch</h3>
+            <form onsubmit="subscribeNewsletter(event)">
+                <input type="email" id="newsletterEmail" placeholder="Email" required>
+                <button class="btn" type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div style="margin-top: 1rem;">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">X</a>
+        </div>
+        <nav style="margin-top: 1rem;">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="testimonials.html">Testimonials</a>
+        </nav>
+    </div>
+</footer>
+<script src="main.js"></script>
+</body></html>

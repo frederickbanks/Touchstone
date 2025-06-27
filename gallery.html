@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book Haven | Gallery</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Book Haven</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About Us</a>
+          <a href="testimonials.html">Testimonials</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <button class="btn" style="float: right" onclick="openCart()">
+        View Shopping Cart
+      </button>
+      <h2>Gallery</h2>
+      <div class="grid" style="grid-template-columns: repeat(3, 1fr)">
+        <div class="card">
+          <img src="images/Client3_Book1.png" alt="Client3 Book1" />
+          <div class="card-body">
+            <h3>Client3 Book1</h3>
+            <p>Book1 from Book Haven</p>
+            <button class="btn" onclick="addToCart('Client3 Book1')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Client3_Book2.png" alt="Client3 Book2" />
+          <div class="card-body">
+            <h3>Client3 Book2</h3>
+            <p>Book2 from Book Haven</p>
+            <button class="btn" onclick="addToCart('Client3 Book2')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Client3_Book3.png" alt="Client3 Book3" />
+          <div class="card-body">
+            <h3>Client3 Book3</h3>
+            <p>Book3 from Book Haven</p>
+            <button class="btn" onclick="addToCart('Client3 Book3')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Client3_Magazine1.png" alt="Client3 Magazine1" />
+          <div class="card-body">
+            <h3>Client3 Magazine1</h3>
+            <p>Magazine1 from Book Haven</p>
+            <button class="btn" onclick="addToCart('Client3 Magazine1')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Client3_Magazine2.png" alt="Client3 Magazine2" />
+          <div class="card-body">
+            <h3>Client3 Magazine2</h3>
+            <p>Magazine2 from Book Haven</p>
+            <button class="btn" onclick="addToCart('Client3 Magazine2')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Client3_Magazine3.png" alt="Client3 Magazine3" />
+          <div class="card-body">
+            <h3>Client3 Magazine3</h3>
+            <p>Magazine3 from Book Haven</p>
+            <button class="btn" onclick="addToCart('Client3 Magazine3')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Client3_Notebook.png" alt="Client3 Notebook" />
+          <div class="card-body">
+            <h3>Client3 Notebook</h3>
+            <p>Notebook from Book Haven</p>
+            <button class="btn" onclick="addToCart('Client3 Notebook')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Client3_Stickers.png" alt="Client3 Stickers" />
+          <div class="card-body">
+            <h3>Client3 Stickers</h3>
+            <p>Stickers from Book Haven</p>
+            <button class="btn" onclick="addToCart('Client3 Stickers')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Client3_ToteBag.png" alt="Client3 ToteBag" />
+          <div class="card-body">
+            <h3>Client3 ToteBag</h3>
+            <p>ToteBag from Book Haven</p>
+            <button class="btn" onclick="addToCart('Client3 ToteBag')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal">
+      <div class="modal-content">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
+        <button class="btn" onclick="clearCart()">Clear Cart</button>
+        <button class="btn" onclick="processOrder()">Process Order</button>
+        <button class="btn" onclick="closeCart()">Close</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div>
+          <h3>Stay in touch</h3>
+          <form onsubmit="subscribeNewsletter(event)">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Email"
+              required
+            />
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div style="margin-top: 1rem">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">X</a>
+        </div>
+        <nav style="margin-top: 1rem">
+          <a href="index.html">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About Us</a>
+          <a href="testimonials.html">Testimonials</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

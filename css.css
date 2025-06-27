@@ -1,0 +1,180 @@
+/*  ───────────────────────────────
+    0.  Base tokens
+    ─────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap");
+
+:root {
+  /* brand palette */
+  --midnight: #2e2e4e; /* background / header / footer */
+  --regal: #5c2e5c; /* primary accent (links / CTA) */
+  --lit-blue: #3f5461; /* secondary accent (hero, cards) */
+  --book-worm: #3e5641; /* success / positive messages */
+  --romantic: #742c36; /* hover / danger / error */
+
+  /* neutrals */
+  --text-dark: #1a1a1a;
+  --text-light: #ffffff;
+}
+
+/*  ───────────────────────────────
+    1.  Global element resets
+    ─────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px; /* Calibri Normal 16 px  */
+  color: var(--text-dark);
+  background: #fff;
+  line-height: 1.6;
+}
+a {
+  color: var(--regal);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: var(--romantic);
+  text-decoration: underline;
+}
+
+/*  ───────────────────────────────
+    2.  Typography scale
+    ─────────────────────────────── */
+h1,
+h2 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+h1 {
+  font-size: 30px;
+} /* Arial Bold 30 px       */
+h2 {
+  font-size: 25px;
+} /* Arial Bold 25 px       */
+
+h3 {
+  font: 700 20px/1.4 Calibri;
+} /* Calibri Bold 20 px     */
+h4 {
+  font: 400 16px/1.4 Calibri;
+} /* Calibri Normal 16 px   */
+
+p,
+li {
+  font: 400 16px/1.6 Calibri;
+}
+
+small {
+  font: 700 11px/1.4 Arial;
+} /* Arial Bold 11 px       */
+
+.accent-text {
+  font-family: "Comfortaa", cursive; /* Comfortaa Normal 15 px */
+  font-size: 15px;
+}
+
+/*  ───────────────────────────────
+    3.  Layout helpers
+    ─────────────────────────────── */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 0;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.grid-3 {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/*  ───────────────────────────────
+    4.  Brand UI elements
+    ─────────────────────────────── */
+header,
+footer {
+  background: var(--midnight);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+}
+header nav a,
+footer nav a,
+footer a {
+  color: var(--text-light);
+  margin-right: 1rem;
+}
+
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+header .brand img {
+  height: 40px;
+  width: auto;
+}
+
+.hero {
+  background: var(--lit-blue);
+  color: var(--text-light);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.3rem;
+  background: var(--regal);
+  color: var(--text-light);
+  border: none;
+  border-radius: 4px;
+  font: 700 16px/1 Arial;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  background: var(--romantic);
+}
+.btn:focus-visible {
+  outline: 2px dashed var(--text-light);
+  outline-offset: 3px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+.card img {
+  width: 100%;
+  display: block;
+}
+.card-body {
+  padding: 1rem;
+}
+
+/*  ───────────────────────────────
+    5.  Cart modal (unchanged, colour-tuned)
+    ─────────────────────────────── */
+#cartModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 1000;
+}
+#cartModal .modal-content {
+  background: #fff;
+  max-width: 500px;
+  margin: 10% auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
